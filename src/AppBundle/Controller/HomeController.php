@@ -1,25 +1,26 @@
 <?php
-
+/**
+ * Created by PhpStorm.
+ * User: MSI-HASSAN
+ * Date: 28/12/2017
+ * Time: 10:30
+ */
 
 namespace AppBundle\Controller;
+
+
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 
 
-class PokemonController extends Controller
+class HomeController extends Controller
 {
-
     /**
-     * @Route("/pokemon", name="pokemon_list")
-     * @Method("GET")
+     * @Route("/", name="home_page")
      */
     public function indexAction(Request $request)
     {
-        return $this->render('pokemon/index.html.twig');
-
+        return $this->render('home/index.html.twig');
     }
-
-
 }
